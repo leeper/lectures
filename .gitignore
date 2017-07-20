@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.synctex.gz(busy)
+*.bbl
+*.blg
+*.nav
+*.snm
+*.toc
+*.vrb
+*.dvi
