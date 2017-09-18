@@ -1,0 +1,192 @@
+\documentclass[14pt]{beamer} %Makes presentation
+%\documentclass[14pt, handout]{beamer} %Makes Handouts
+
+\usetheme{Singapore} %Gray with fade at top
+\useoutertheme[subsection=false]{miniframes} %Supppress subsection in header
+\useinnertheme{rectangles} %Itemize/Enumerate boxes
+\usecolortheme{seagull} %Color theme
+\usecolortheme{rose} %Inner color theme
+
+\definecolor{light-gray}{gray}{0.75}
+\definecolor{dark-gray}{gray}{0.55}
+\setbeamercolor{item}{fg=light-gray}
+\setbeamercolor{enumerate item}{fg=dark-gray}
+
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{mini frames}[default]
+%\setbeamercovered{dynamics}
+\setbeamerfont*{title}{size=\Large,series=\bfseries}
+
+%\setbeameroption{notes on second screen} %Dual-Screen Notes
+%\setbeameroption{show only notes} %Notes Output
+
+\setbeamertemplate{frametitle}{\vspace{.5em}\bfseries\insertframetitle}
+\newcommand{\heading}[1]{\noindent \textbf{#1}\\ \vspace{1em}}
+
+% small footnotes
+\setbeamerfont{footnote}{size=\tiny}
+
+\usepackage{bbding,color,multirow,times,ccaption,tabularx,graphicx,verbatim,booktabs,fixltx2e}
+\usepackage{colortbl} %Table overlays
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{alltt}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{trees}
+
+
+
+
+\author[]{Thomas J. Leeper}
+\institute[]{
+  \inst{}%
+  Department of Government\\London School of Economics and Political Science
+}
+
+\title{\large Teaching Political Science to\\ (LSE) Undergraduates:\\ Lessons for GTAs}
+
+\date[]{19 September 2017}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+    \frametitle{What is teaching?}
+    
+    \vspace{1.5em}
+    \begin{center}
+    {\LARGE \onslide<2->{Teaching $\neq$ lecturing!}}
+    \end{center}
+    
+}
+
+\frame{
+    \frametitle{Alignment}
+    
+	\begin{itemize}\itemsep1em
+	\item<2-> All courses have ILOs
+		\begin{itemize}
+		\item ``Intended Learning Outcomes''
+		\end{itemize}
+	\item<3-> All course activities should align with those goals
+	
+	\item<4-> Know the ILOs for your course and design lessons that help students to achieve those outcomes
+	\end{itemize}
+}
+
+% alignment -> everything we do in university is a learning activity that should add up to some higher-order goal, this is a piece of the puzzle that gets students to learn the things we want them to learn
+	% class activities should help studies obtain learning outcomes, often by \textit{applying} material from readings and lectures
+	% know the learning outcomes for your course; if they're not clear, ask your lecturer about them
+	% make a lesson plan - what is the point of this lesson? what will you do in this lesson? how does the content of the lesson achieve learning objectives?
+	% think about what to tell your students about how this lesson connects to learning goals -> may be useful to have them occassionally reflect on their own learning
+
+\frame{
+    \frametitle{Aligned Class Teaching}
+    \begin{itemize}\itemsep1em
+        \item<2-> Write a lesson plan for yourself based on the ILOs
+        \item<3-> Think about whether students are learning \textit{about} something or learning \textit{how to do} something
+        \item<4-> Explicitly connect activities to ILOs
+        	\begin{itemize}
+        	\item Telling students about that connection
+        	\item Self-reflective activities
+        	\end{itemize}
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Instrumental Motivations}
+    \begin{itemize}\itemsep1em
+        \item<2-> Teaching is a lot of work!!
+        \item<3-> Personal pay-offs to be a GTA
+        	\begin{itemize}
+        	\item Improving your own teaching skills
+        	\item Exposure to readings
+        	\item Chance to observe all aspects of teaching and learning
+        	\item Preparation for your own eventual teaching
+        	\end{itemize}
+    \end{itemize}
+}
+
+% think of being a GTA as a way to create a course that you could teach in the future - even if it's not exactly this course, it should get you to think about:
+	% ILOs
+	% readings
+	% organization/flow of the course
+	% class and lecture activities
+	% exams
+
+\frame{
+    \frametitle{The First Class}
+    \begin{enumerate}\itemsep1em
+        \item Administration
+        	\begin{itemize}
+        	\item<2-> What is the purpose of class?
+        	\item<2-> Provide a class syllabus
+        	\end{itemize}
+        \item Excitement/Engagement
+        	\begin{itemize}
+        	\item<3-> Showcase what class will be like through an activity
+        	\end{itemize}
+        \item Tone-setting
+        	\begin{itemize}
+        	\item<4-> Give a good first impression
+        	\item<4-> What kind of GTA are you going to be this term?
+        	\end{itemize}
+    \end{enumerate}
+}
+
+% The first class
+	% this should be partly administrative but partly substantive
+	% you may want to make a one-page ``class syllabus'' (your name, contact information, office hours, rules about contacting you, defining your role/s)
+	% have an activity in-mind that sets the tone for the course: students are expected to have done the reading, students are expected to participate, students should not use their laptops
+	% make an impression of what kind of person you want your students to think you are: are you confident and serious? are you funny and approachable? are you your first name or Mr/Ms/whatever? etc. Practice your intro with a friend!
+	
+\frame{
+    \frametitle{The Remaining 19 Classes}
+    
+    What should you do with the remainder of the year?
+    
+    \begin{itemize}\itemsep1em
+        \item<2-> Ask your lecturer/convenor!
+        \item<3-> Collaborate with other GTAs
+        \item<4-> Reflect on your own practice
+        \item<5-> Steal. Steal. Steal.
+    \end{itemize}
+}
+
+% The rest of the classes
+	% Ask your lecturer what you should be doing - it's their job to tell you what you should be doing. Ask them for feedback on lesson ideas.
+	% If you're in a big course, collaborate with the other GTAs especially if they're more experienced
+	% Prepare in advance to the extent possible, but set aside 1 or more hours between lecture and class to prep
+	% Don't hesitate to observe other teachers. (Get their permission to do so.)
+	% Think about objectives -> design activities -> reflect on your own practice (what worked? what didn't?)
+	% Good artists steal! Don't reinvent things -> try to take lesson plans off-the-shelf
+		% Think-pair-share is the safest fall back activity
+		% Small discussion groups
+		% Student presentations - these are almost universally terrible
+		% Individual instructor feedback versus group feedback versus peer feedback
+		% eventually students will want to talk about summatives and exams; plan on leaving room for this early and late in LT
+		% Occasionally, you may need to lecture (very, very rarely) because students are confused, etc.
+	% feedback class activities, learning, problems, questions to your lecturer
+
+\frame{
+    \frametitle{Some Things to Think About}
+    \begin{itemize}\itemsep1em
+        \item<1-> Lack of perceived authority
+        \item<2-> Attendance
+        \item<3-> Laptops/distractions
+        \item<4-> Excessive requests for help/meetings
+        \item<5-> ``is this on the exam''-ism
+        \item<6-> Silence
+        \item<7-> Teaching evaluations
+    \end{itemize}
+}
+
+
+\frame{}
+
+\end{document}
