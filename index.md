@@ -19,7 +19,7 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
 
  - [Teaching Political Science to (LSE) Undergraduates: Lessons for GTAs](2017-09-19-GTATraining/Slides-leeper.pdf)
  - [Some advice from a reproducible researcher about how some advice from research data repositories to irreproducible researchers about reproducibility and repositories might help researchers, repositories, and reproducibility](2017-06-16-DCM/Slides-leeper.pdf)
- - [LSE Open Data Government Department Subject Talk](2017-03-29-OpenDay/lecture.pdf)
+ - [LSE Open Day Government Department Subject Talk](2017-03-29-OpenDay/lecture.pdf)
  - [What role can surveys play in behavioural science?](2017-01-16-ExecMScBS/slides.pdf)
 
 **2014**
