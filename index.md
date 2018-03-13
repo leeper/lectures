@@ -1,4 +1,9 @@
-# Lecture Slides
+---
+layout: default
+title: Lecture Slides
+description: "Source code and files for various one-off talks and lectures by Thomas Leeper."
+ghurl: https://github.com/leeper/lecture/tree/gh-pages
+---
 
 This [repository](https://github.com/leeper/lectures) contains source code and files for various one-off talks and lectures I have given. All content is copyright Thomas J. Leeper, licensed [CC-BY-SA](LICENSE.md), unless otherwise noted. Almost all images are open licensed, mostly from Wikimedia.
 
