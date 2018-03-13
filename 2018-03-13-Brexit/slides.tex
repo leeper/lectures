@@ -55,6 +55,19 @@
 \footnotesize{Source: Hobolt, Leeper, and Tilley (YouGov)}
 }
 
+\newcommand{\imageslide}[2]{
+\bgroup
+\setbeamercolor{background canvas}{bg=black}
+\setbeamertemplate{background}
+{\includegraphics[height=\paperheight,width=\paperwidth]{images/black.png}}
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[#1]{#2}
+\end{center}
+\end{frame}
+\egroup
+}
+
 % font
 \usepackage{tgadventor}
 \renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
@@ -125,18 +138,9 @@ Dr Thomas J. Leeper
 \footnotesize{Source: Ipsos MORI}
 }
 
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/david-cameron.png}
-\end{center}
-}
+\imageslide{width=\textwidth}{images/david-cameron.png}
 
-
-\frame{
-\begin{center}
-\includegraphics[height=.8\textheight]{images/ukip-pledge.png}
-\end{center}
-}
+\imageslide{height=\textheight}{images/ukip-pledge.png}
 
 \frame{
 \begin{center}
@@ -145,17 +149,9 @@ Dr Thomas J. Leeper
 }
 
 
-\frame{
-\begin{center}
-\includegraphics[height=\textheight]{images/government-leaflet.png}
-\end{center}
-}
+\imageslide{height=\textheight}{images/government-leaflet}
 
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/brexit-bus.png}
-\end{center}
-}
+\imageslide{width=\textwidth}{images/brexit-bus}
 
 
 \frame{
@@ -165,6 +161,7 @@ Dr Thomas J. Leeper
 }
 
 
+\imageslide{width=\textwidth}{images/brexit-bus}
 
 \frame{
 \begin{center}
@@ -176,42 +173,16 @@ Dr Thomas J. Leeper
 \section{The Result}
 \frame{\tableofcontents[currentsection]}
 
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/sample-ballot.png}
-\end{center}
-}
+\imageslide{width=\textwidth}{images/sample-ballot}
 
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/economist-result.png}
-\end{center}
-}
+\imageslide{width=\textwidth}{images/economist-result}
 
-\frame{
-\begin{center}
-\includegraphics[height=\textheight]{images/eu-commission.png}
-\end{center}
-}
-
-\frame{
-\begin{center}
-\includegraphics[height=\textheight]{images/westminster.png}
-\end{center}
-}
+\imageslide{height=\textheight}{images/eu-commission}
+\imageslide{height=\textheight}{images/westminster}
 
 
-\frame{
-\begin{center}
-\includegraphics[height=\textheight]{images/referendum-map.png}
-\end{center}
-}
-
-\frame{
-\begin{center}
-\includegraphics[height=\textheight]{images/referendum-map-london.png}
-\end{center}
-}
+\imageslide{height=\textheight}{images/referendum-map}
+\imageslide{height=\textheight}{images/referendum-map-london}
 
 
 \frame{
@@ -227,21 +198,11 @@ Dr Thomas J. Leeper
 \end{center}
 }
 
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/wages-scatterplot.png}
-\end{center}
-}
+\imageslide{width=\textwidth}{images/wages-scatterplot}
 
 \frame{
 \begin{center}
 \includegraphics[height=\textheight]{images/brexit-exports-scatterplot.png}
-\end{center}
-}
-
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/nicola-sturgeon.png}
 \end{center}
 }
 
@@ -268,7 +229,6 @@ Dr Thomas J. Leeper
 \includegraphics[width=\textwidth]{images/ge2017-hoc-membership.png}
 \end{center}
 }
-
 
 \section{What Now?}
 \frame{\tableofcontents[currentsection]}
@@ -317,7 +277,7 @@ Dr Thomas J. Leeper
 \frame{
 \frametitle{What do voters want?}
 \begin{center}
-\includegraphics[height=\textheight]{images/wordcloud4-all}
+\includegraphics[height=\textheight, trim = {1cm 1cm 1cm 3cm}, clip]{images/wordcloud4-all}
 \end{center}
 \hltfootnote
 }
@@ -350,13 +310,7 @@ Dr Thomas J. Leeper
 }
 
 
-\frame{}
-
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/northern-ireland-border.png}
-\end{center}
-}
+\imageslide{width=\textwidth}{images/northern-ireland-border}
 
 \frame{
 \begin{center}
@@ -369,7 +323,7 @@ Dr Thomas J. Leeper
 \frame{}
 
 \frame{
-\frametitle{Perceived Effects of Brexit}
+%\frametitle{Perceived Effects of Brexit}
 \textit{Do you think leaving the European Union will have a positive or negative effect \textbf{on Britain}?}
 
 \begin{center}
@@ -377,13 +331,7 @@ Dr Thomas J. Leeper
 \end{center}
 }
 
-
-\frame{
-\begin{center}
-\includegraphics[height=\textheight]{images/city-of-london}
-\end{center}
-\hltfootnote
-}
+\imageslide{height=\textheight}{images/city-of-london}
 
 
 \frame{
@@ -407,7 +355,7 @@ Dr Thomas J. Leeper
 
 \item<3-> Remain voters were younger, more urban, more likely to have attended university
 
-\item<4-> Voters divided on what they want from Britain and views of what impact it will have
+\item<4-> Voters divided on what they want from Brexit and views of what impact it will have
 
 \item<5-> Britain is leaving the EU, but the type of Brexit remains unknown
 \end{itemize}
@@ -420,16 +368,6 @@ Dr Thomas J. Leeper
 \includegraphics[height=.9\textheight]{images/cartoon}
 \end{center}
 }
-
-
-\bgroup
-\setbeamercolor{background canvas}{bg=white}
-\begin{frame}[plain]
-\begin{center}
-\includegraphics[height=.9\textheight]{images/lse-beaver}
-\end{center}
-\end{frame}
-\egroup
 
 
 \bgroup
