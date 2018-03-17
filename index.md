@@ -23,7 +23,7 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
  - [Treadmills, Fractals, Apples and Oranges](2017-11-11-USC/slides.pdf)
  - [Teaching Political Science to (LSE) Undergraduates: Lessons for GTAs](2017-09-19-GTATraining/slides.pdf)
  - [Some advice from a reproducible researcher about how some advice from research data repositories to irreproducible researchers about reproducibility and repositories might help researchers, repositories, and reproducibility](2017-06-16-DCM/slides.pdf)
- - [How Do Information and Cues Affect Citizens' Election Forecasts?(2017-05-02-LSE/slides.pdf)
+ - [How Do Information and Cues Affect Citizens' Election Forecasts?](2017-05-02-LSE/slides.pdf)
  - [LSE Open Day Government Department Subject Talk](2017-03-29-OpenDay/slides.pdf)
  - [Social Perceptions in the British EU Membership Referendum](2017-03-15-Zurich/slides.pdf)
  - [What role can surveys play in behavioural science?](2017-01-16-ExecMScBS/slides.pdf)
