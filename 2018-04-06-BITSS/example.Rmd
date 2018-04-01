@@ -1,0 +1,46 @@
+---
+title: "An Rmarkdown Example"
+author: "Thomas J. Leeper"
+date: 2018-01-30
+output: pdf_document
+---
+
+```{r data, echo=FALSE, results="hide"}
+library("knitr")
+opts_chunk$set(echo=FALSE)
+library("gapminder")
+library("ggplot2")
+suppressPackageStartupMessages(library("stargazer"))
+```
+
+There are some descriptive statistics about the data:
+
+```{r table1}
+knitr::kable(aggregate(cbind(lifeExp, pop, gdpPercap) ~ year, data = gapminder, FUN = mean))
+```
+
+Figures 1 shows some general patterns.
+
+```{r figure1}
+ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, colour = continent)) + 
+  geom_point()
+```
+  
+And the main regression are shown in the table.
+
+```{r table2, results = "asis"}
+stargazer::stargazer(
+  x1 <- lm(lifeExp ~ I(pop/1000000) + gdpPercap, data = gapminder),
+  x2 <- lm(lifeExp ~ I(pop/1000000) + gdpPercap + year + factor(continent), data = gapminder),
+  header = FALSE
+)
+```
+
+```{r inlinenumbers, results="hide"}
+pop_effect1 <- sprintf("%0.2f", coef(x1)[2L])
+pop_effect2 <- sprintf("%0.2f", coef(x2)[2L])
+```
+
+To summarize, here are some main results. To summarize, here are some main results. 
+The estimated effect of population size on life expectancy is `r pop_effect1`.
+Using continent and year controls, however, changes this effect to: `r pop_effect2`.

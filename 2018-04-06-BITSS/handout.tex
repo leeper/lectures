@@ -1,0 +1,123 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{alltt}
+\usepackage{verbatim}
+\usepackage{booktabs}
+\usepackage{mdwlist}
+\usepackage[hidelinks]{hyperref}
+
+\title{git and rmarkdown cheatsheet}
+\date{}
+
+\begin{document}
+
+\vspace{-6em}
+
+\maketitle
+
+\vspace{-5em}
+
+\section{GitHub}
+
+GitHub is a widely used platform for open sharing of data, software, code, and other materials. It uses \textbf{git}, a powerful tool for organizing, collaborating on, and version controlling a project. Let's get started:
+
+\begin{enumerate*}
+\item Create a GitHub account at \url{https://github.com}
+\item Once setup, push the green \texttt{New repository} button
+\item Given the repository a name. It can be anything. ``amsterdam'', ``rt2-example'', etc.
+\item You can give it a description if you want.
+\item Click \texttt{Create repository}. You're all setup!
+\end{enumerate*}
+
+\section{Basics of using git (on the command line)}
+
+Now we'll work \textit{locally} with git. To get stared, we need to know some actions that git can perform. The key idea is that we will create \textit{snapshots} of our project by \textbf{committing} files to the local git repository and those changes will be reflected on Github when we \textbf{push} them. Here's a quick glossary:
+
+\begin{itemize}\itemsep0em
+\item \textbf{stage}: select files to be recorded in a ``snapshot'' of the project
+	\begin{itemize}
+	\item \textbf{unstage}: remove files from the snapshot (but not from your computer)
+	\end{itemize}
+\item \textbf{commit}: record a snapshot of the staged files, labelled with a ``commit message''
+	\begin{itemize}
+	\item \textbf{amend}: modify a commit with new changes or commit message
+	\end{itemize}
+\item \textbf{branch}: produce a complete local copy of the project where changes can be made independently of the ``master'' branch
+\item \textbf{merge}: update a branch with changes from another local branch (or a collaborator's changes from GitHub); you can change multiple branches independently.
+\item \textbf{push}: send the project (any new commits) to a remote server (like GitHub)
+\item \textbf{pull}: grab new commits from a remote server
+\end{itemize}
+
+\noindent You can implement these steps through RStudio, through Git GUI, GitKraken (see below) or the command line. On the command line, the key things to remember are: \texttt{git add} (stage) or \texttt{git rm} (unstage), \texttt{git commit}, \texttt{git push}, \texttt{git pull}, \texttt{git branch}, \texttt{git merge}, etc.
+
+\subsection*{Test Yourself}
+
+You get a hang of what git can offer by trying out the following.
+
+\begin{enumerate*}
+\item Stage and commit your files
+\item Change one or more files in any way. See how those changes become ``unstaged''.
+\item Create a new branch to contain these changes.
+\item Stage and commit the changes in the new branch.
+\item Push the new branch to GitHub. See that they show up there.
+\item Merge the changes to the master branch locally.
+\item Push the changes to the master branch on GitHub.
+\item Change some files through the GitHub web interface. Pull them locally.
+\end{enumerate*}
+
+\noindent Overall, the most essential steps of git are \texttt{pull > stage > commit > push}.
+
+\section{Reproducible documents with rmarkdown}
+
+Once you've mastered git for managing and tracking your files, another useful set of tools to know relate to reproducible, dynamic documents. We'll use Rmarkdown as an example for this.
+
+\footnotesize 
+\begin{verbatim}
+---
+title: "An Rmarkdown Example"
+author: "Thomas J. Leeper"
+date: 2018-04-06
+output: pdf_document
+---
+
+```{r data, echo=FALSE, results="hide"}
+knitr::opts_chunk$set(echo=FALSE)
+library("gapminder")
+library("ggplot2")
+suppressPackageStartupMessages(library("stargazer"))
+```
+
+There are some descriptive statistics about the data:
+
+```{r table1}
+knitr::kable(aggregate(cbind(lifeExp, pop, gdpPercap) ~ year, data = gapminder, FUN = mean))
+```
+
+Figures 1 shows some general patterns. And the main regression are shown in the table.
+
+```{r figure1}
+ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, colour = continent)) + 
+  geom_point()
+```
+  
+```{r table2, results = "asis"}
+stargazer::stargazer(
+  x1 <- lm(lifeExp ~ I(pop/1000000) + gdpPercap, data = gapminder),
+  x2 <- lm(lifeExp ~ I(pop/1000000) + gdpPercap + year + factor(continent), data = gapminder),
+  header = FALSE
+)
+```
+
+```{r inlinenumbers, results="hide"}
+pop_effect1 <- sprintf("%0.2f", coef(x1)[2L])
+pop_effect2 <- sprintf("%0.2f", coef(x2)[2L])
+```
+
+To summarize, here are some main results. To summarize, here are some main results. 
+The estimated effect of population size on life expectancy is `r pop_effect1`.
+Using continent and year controls, however, changes this effect to: `r pop_effect2`.
+\end{verbatim}
+
+
+\end{document}
