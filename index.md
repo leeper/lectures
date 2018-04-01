@@ -11,6 +11,7 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
 
 **2018**
 
+ - [Reproducibility with git and rmarkdown](2018-04-06-BITSS/slides.pdf) (slides), [git and rmarkdown cheatsheet](2018-04-06-BITSS/handout.pdf) (handout)
  - [Brexit: What happened? What now?](2018-03-13-Brexit/slides.pdf)
  - [Presentations: A Presentation](2018-03-01-Presentations/slides.pdf)
  - [Reproducibility with git and rmarkdown](2018-01-30-LSEGeography/slides.pdf) (slides), [git and rmarkdown cheatsheet](2018-01-30-LSEGeography/handout.pdf) (handout)
@@ -26,6 +27,7 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
  - [How Do Information and Cues Affect Citizens' Election Forecasts?](2017-05-02-LSE/slides.pdf)
  - [LSE Open Day Government Department Subject Talk](2017-03-29-OpenDay/slides.pdf)
  - [Social Perceptions in the British EU Membership Referendum](2017-03-15-Zurich/slides.pdf)
+ - [Reproducibility with git and rmarkdown](2017-01-30-BITSS/slides.pdf)
  - [What role can surveys play in behavioural science?](2017-01-16-ExecMScBS/slides.pdf)
 
 **2014**
