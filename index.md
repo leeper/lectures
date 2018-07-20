@@ -30,6 +30,10 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
  - [Reproducibility with git and rmarkdown](2017-01-30-BITSS/slides.pdf)
  - [What role can surveys play in behavioural science?](2017-01-16-ExecMScBS/slides.pdf)
 
+**2015**
+
+ - [Crowdsourcing with MTurkR](2015-07-01-useR/slides.pdf)
+
 **2014**
 
  - [Reproducible Research: What, Why, and How?](2014-10-28-InteractingMinds/slides.pdf)
