@@ -11,6 +11,7 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
 
 **2018**
 
+ - [The CloudyR Project: Statistical Cloud Computing in R with Amazon and Google](2018-08-01-JSM/slides.pdf)
  - [Reproducibility with git and rmarkdown](2018-04-06-BITSS/slides.pdf) (slides), [git and rmarkdown cheatsheet](2018-04-06-BITSS/handout.pdf) (handout)
  - [Brexit: What happened? What now?](2018-03-13-Brexit/slides.pdf)
  - [Presentations: A Presentation](2018-03-01-Presentations/slides.pdf)
