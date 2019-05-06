@@ -9,6 +9,10 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
 
 ## Contents
 
+**2019**
+
+ - [Tips for Working Reproducibly](2019-05-09-LSE-VAM/slides.pdf)
+
 **2018**
 
  - [The CloudyR Project: Statistical Cloud Computing in R with Amazon and Google](2018-08-01-JSM/slides.pdf)
