@@ -139,8 +139,8 @@
 \frametitle{Some Semantics}
 
 \begin{itemize}\itemsep1em
-\item Reproduction: recreating output from a shared input
-\item Replication: creating new output from new input
+\item \textbf{Reproduction}: recreating output from a shared input
+\item \textbf{Replication}: creating new output from new input
 \end{itemize}
 
 \vspace{1em}
@@ -150,9 +150,9 @@
 
 \frame{
 
-\frame{Beyond Scope for Today}
+\frametitle{Beyond Scope for Today}
 
-\begin{itemize}
+\begin{itemize}\itemsep1em
 \item Verification
 \item Data Transparency
 \item Replication
@@ -171,13 +171,15 @@
 
 \frametitle{Lewis and Clark}
 
-Jefferson's instructions:\\
+\onslide<2->{Jefferson's instructions:}\\
 
 \vspace{2em}
 
+\onslide<2->{
 \begin{quote}
 The object of your mission is to explore the Missouri river, \& such principal stream of it, as, by its course \& communication with the water of the Pacific ocean may offer the most direct \& practicable water communication across this continent, for the purposes of commerce
 \end{quote}
+}
 
 }
 
@@ -217,12 +219,7 @@ To provide, on the accident of your death, against anarchy, dispersion \& the co
 
 }
 
-
-
-
-\frame{\tableofcontents}
-
-
+\frame{}
 
 
 \section[Organizing]{Organizing Things}
@@ -251,9 +248,11 @@ To provide, on the accident of your death, against anarchy, dispersion \& the co
 
 If we're going to be transparent \textit{in the end} (e.g., at verification or data archiving stage), what do we need to provide?
 
-\begin{itemize}\itemsep1em
-\item<2-> A well-organized, reproducible analysis!
-\end{itemize}
+\vspace{2em}
+
+\onslide<2->{A well-organized, reproducible analysis!}
+
+\vspace{2em}
 
 \only<3->{So rather than make that an annoying, post-hoc exercise related to publication, try to get organized and stay organized throughout your project from the very beginning.}
 
@@ -432,7 +431,11 @@ echo # My Project > README.md
 \frame{
 	\frametitle{File names}
 	
-	\begin{itemize}
+	Which of these do we like best?\\
+	
+	\vspace{1em}
+	
+	\begin{itemize}\itemsep1em
 	\item PhD Comics style
 	\item Sequential version numbers
 	\item Datestamps
@@ -463,13 +466,19 @@ echo # My Project > README.md
 \frame{
 \frametitle{ISO 8601}
 	
-There is only one way to write dates:
+There is only one way to write dates:\\
 	
+\vspace{1em}
+
 \texttt{YYYY-MM-DD}
+
+\vspace{1em}
 
 Why?
 
-\begin{itemize}
+\vspace{1em}
+
+\begin{itemize}\itemsep1em
 \item Unambiguous
 \item Sortable by most-to-least important digits
 \item Language agnostic
@@ -483,7 +492,7 @@ Why?
 \frame{
 	\frametitle{Case}
 	
-	\begin{itemize}
+	\begin{itemize}\itemsep1em
 	\item TitleCase
 	\item camelCase
 	\item snake\_case
@@ -495,15 +504,14 @@ Why?
 
 % file types
 \frame{
-	\frametitle{Formats}
 	
 	\vspace{3em}
 	
-	\onslide<2->{Everything you do should be plain text*}
+	\onslide<1->{Everything you do should be plain text*}
 	
 	\vspace{3em}
 	
-	{\footnotesize * Exceptions to this are images (sometimes)}
+	\onslide<2->{\footnotesize * Exceptions to this are images (sometimes)}
 }
 
 \frame{
@@ -549,21 +557,6 @@ References & .bib \\
 }
 
 \frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/punchcarddata}
-\end{center}
-}
-
-\frame{
-\begin{center}
-\includegraphics[width=\textwidth]{images/punchcardcodebook}
-\end{center}
-}
-
-
-\frame{}
-
-\frame{
 
 \frametitle{Reference Management}
 
@@ -602,6 +595,31 @@ References & .bib \\
 \end{verbatim}
 
 \end{frame}
+
+
+\frame{
+
+\vspace{3em}
+
+Is it possible to take the plain text ideology too far?
+
+}
+
+\frame{
+\begin{center}
+\includegraphics[width=\textwidth]{images/punchcarddata}
+\end{center}
+}
+
+\frame{
+\begin{center}
+\includegraphics[width=\textwidth]{images/punchcardcodebook}
+\end{center}
+}
+
+
+\frame{}
+
 
 
 \frame{
@@ -842,26 +860,34 @@ paper.pdf: paper.tex figure/figure1.pdf table/table1.tex
 \end{itemize}
 }
 
-\frame{
-\begin{alltt}
-\# My Manuscript
-
-Thomas J. Leeper
-
-This is my manuscript.
-\end{alltt}
-}
-
 
 \begin{frame}[fragile]
 
 \frametitle{Rmarkdown}
 
-\begin{enumerate}\itemsep0.5em
+\begin{enumerate}\itemsep1em
 \item YAML metadata header
+
+\begin{alltt}\footnotesize
+---
+title: My Manuscript
+author: Thomas J. Leeper
+---
+\end{alltt}
+
+
 \item Document contents in \textbf{markdown}
+
+\begin{alltt}\footnotesize
+\# A header
+\#\# A subhead
+This is my manuscript, **bold** and *italic*.
+\end{alltt}
+
+
 \item Code in ``code chunks'':
 
+\footnotesize
 \begin{verbatim}
 ```{r chunk1}
 # R code
@@ -1012,6 +1038,7 @@ ggplot(mtcars,
 
 }
 
+\frame{}
 
 
 \frame{
@@ -1025,27 +1052,6 @@ ggplot(mtcars,
 \end{itemize}
 
 }
-
-
-
-
-
-
-% common mistakes (making assumptions about environments and workflows): setwd(), point-and-click; software versions
-%% http://economics.mit.edu/faculty/angrist/data1/mhe
-
-
-
-
-
-%% https://doi.org/10.7910/DVN/THJYQR (H,H,Y)
-%% http://economics.mit.edu/faculty/angrist/data1/mhe (A,P)
-%% 
-
-
-
-
-
 
 
 \frame{
@@ -1065,25 +1071,46 @@ Questions?
 \frame{\tableofcontents[currentsection]}
 
 
+\bgroup
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}[plain]{}
+
+\textcolor{white}{\Huge \textbf{Activity!}}
+
+\vspace{2em}
+
+\textcolor{white}{What tools do you use to store, share, and/or archive your research materials?}
+
+\end{frame}
+\egroup
+
+
+
 \frame{
 
 \frametitle{Keeping things}
 
-There are two considerations related to how you keep and store your research materials:
+Three ways of thinking about how you keep and store your research materials:
 
 \begin{enumerate}\itemsep1em
-\item Collaborating with yourself or others in the future
+\item<2-> Collaborating with yourself or others in the future
 
 	\begin{itemize}
 	\item Going back in time for long-lived projects
-	\item Verification or reproducibility requests
+	\item Verification at publication stage
 	\end{itemize}
 
-\item Collaborating with others now
+\item<3-> Collaborating with others now
 
 	\begin{itemize}
 	\item Collaborating simultaneously
 	\item Collaborating asynchronously
+	\end{itemize}
+
+\item<4-> Collaborating with others after you die
+
+	\begin{itemize}
+	\item Future reproducibility requests
 	\end{itemize}
 
 \end{enumerate}
@@ -1098,18 +1125,22 @@ There are two considerations related to how you keep and store your research mat
 \begin{column}{0.5\textwidth}
 \begin{block}{Live Collaboration}
 \begin{itemize}\itemsep2em
-\item Google Docs
-\item Overleaf
-\item Dropbox/Box/etc.?
+\item<2-> Google Docs
+\item<2-> Overleaf
+\item<2-> Dropbox/Box/etc.
+\item<2-> Email?
 \end{itemize}
 \end{block}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{block}{Other Collaboration}
 \begin{itemize}
-\item Active project: Version control (git)
-\item Backup: Dropbox, GDrive, S3, Github
-\item Archiving: Dataverse, Zenodo, Figshare, OSF
+\item<3-> Active project: Version control (git)
+\item<3-> Backup: Dropbox, GDrive, S3, Github
+
+\vspace{1em}
+
+\item<4-> Archiving: Dataverse, Zenodo, Figshare, OSF
 \end{itemize}
 \end{block}
 \end{column}
