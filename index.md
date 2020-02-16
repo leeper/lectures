@@ -9,6 +9,10 @@ This [repository](https://github.com/leeper/lectures) contains source code and f
 
 ## Contents
 
+**2020**
+
+ - [Reproducible Tools and Workflows](2020-02-17-LSE-RT2/slides.pdf)
+
 **2019**
 
  - [Tips for Working Reproducibly](2019-05-09-LSE-VAM/slides.pdf)
